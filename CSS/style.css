@@ -1,7 +1,13 @@
 /***********************FORMATO GENERAL*********************************/
+/**{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}*/
 
 html{
   font-size: 62.5%;
+  overflow-x:hidden;
 }
 body{
   font-size: 1.6rem;
@@ -17,7 +23,9 @@ ul{
   --main-color: #5a2918;
   --text-color-main: #fff;
   --text-color-secondary: #000;
-  --font-size-normal: clamp(2rem,2.5vh,3rem);
+  --font-size-Xlarge: clamp(2.5rem,4.6vh,7rem);
+  --font-size-large: clamp(2rem,3.5vh,4rem);
+  --font-size-normal: clamp(1rem,2.5vh,2rem);
 }
 
 a{
@@ -59,6 +67,7 @@ a{
   place-items: center;
   display: flex;
   justify-content: space-around;
+  z-index: 3;
 }
 
 .nav-x{
@@ -79,6 +88,15 @@ a{
   height: 100%;
 }
 
+
+.nav-links:hover{
+  font-size: var(--font-size-normal)*2px;
+}
+
+.nav-links:active{
+  font-size: var(--font-size-normal);
+}
+
 .bars{
   height: 100%;
   font-size: 35px;
@@ -93,9 +111,81 @@ a{
   background-position: 25% 30%;
   width: 100vw;
   height: 92vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing-page_content{
+  width: 40%;
+  min-width: 40%;
+  border: 3px solid #fafafa10;
+  background: #fafafa10;
+  backdrop-filter: blur(2.5rem);
+}
+
+.line{
+  height: 4px;
+  width: 100%;
+  background-color: var(--main-color);
+}
+
+.landing-page_content h1{
+   margin: 1rem;
+  font-size: var(--font-size-Xlarge);
+  color: #1a0900;
+}
+
+.landing-page_content h2{
+   margin: 1rem;
+  font-size: var(--font-size-large);
 }
 
 
+.btn-call-to-action{
+  margin: 1rem;
+  color: var(--text-color-main);
+  background-color: #570507;
+  border: 1px solid #73332b;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.btn-call-to-action:hover{
+  transform: scale(1.05);
+}
+
+.btn-call-to-action:active{
+  transform: scale(1);
+}
+
+/***********************SERVICES*********************************/
+
+.services{
+  height: 50vh;
+  min-height: 250px;
+  background-color: var(--main-color) ;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+}
+
+.services div{
+  width: 80%;
+  color: var(--text-color-main);
+}
+
+.services div i{
+  font-size: var(--font-size-Xlarge);
+}
+
+.services div h2{
+  font-size: var(--font-size-large);
+}
+
+.services div p{
+  font-size: var(--font-size-normal);
+}
 
 
 
@@ -154,4 +244,10 @@ a{
     transition: right 0.5s ease-in-out;
     right: 0;
   }
+
+
+  .landing-page_content{
+  width: 80%;
+}
+
 }
