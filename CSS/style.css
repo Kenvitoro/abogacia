@@ -63,6 +63,7 @@ a{
 
 .menu{
   width: 100%;
+  height: 100%;
   display: flex;
   place-items: center;
   display: flex;
@@ -89,12 +90,8 @@ a{
 }
 
 
-.nav-links:hover{
-  font-size: var(--font-size-normal)*2px;
-}
-
 .nav-links:active{
-  font-size: var(--font-size-normal);
+  font-size: var(--font-size-normal)-0.5rem;
 }
 
 .bars{
@@ -121,6 +118,7 @@ a{
   min-width: 40%;
   border: 3px solid #fafafa10;
   background: #fafafa10;
+  -webkit-backdrop-filter: blur(2.5rem);
   backdrop-filter: blur(2.5rem);
 }
 
@@ -186,8 +184,64 @@ a{
 .services div p{
   font-size: var(--font-size-normal);
 }
+/***********************WELCOME*********************************/
 
+.welcome{
+  height: 60vh;
+  max-height: 60vh;
+  background-color: #fff;
+  border-bottom: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.welcome_content{
+  height: 100%;
+  width: 65%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.welcome_content {
+  height: 100%;
+  background-color: #402918;
+}
+
+.introduction{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aqua;
+}
+
+.introduction img{
+  width: 100%;
+}
+
+.introduction p{
+  font-size: var(--font-size-normal);
+}
+
+.assistance{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.assistance h2{
+  font-size: var(--font-size-large);
+}
+
+.assistance h3{
+  font-size: var(--font-size-normal);
+}
+
+.assistance p{
+  font-size: var(--font-size-normal);
+}
 
 
 /***********************MEDIAQUERIES*********************************/
@@ -250,4 +304,8 @@ a{
   width: 80%;
 }
 
+
+.welcome_content{
+  width: 80%;
+}
 }
