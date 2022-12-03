@@ -17,6 +17,16 @@ ul{
   list-style: none;
 }
 
+h1,
+h2,
+h3,
+h4{
+  font-family: var(--font-tittles);
+}
+
+p{
+  font-family: var(--font-normal);
+}
 
 :root{
   --header-color: linear-gradient(75deg,#37190f,#38190f,#39190f,#402918,#5a2918);
@@ -26,6 +36,8 @@ ul{
   --font-size-Xlarge: clamp(2.5rem,4.6vh,7rem);
   --font-size-large: clamp(2rem,3.5vh,4rem);
   --font-size-normal: clamp(1rem,2.5vh,2rem);
+  --font-tittles: 'cormorant garamond', Helvetica, Arial, sans-serif;
+  --font-normal:'open sans', Helvetica, Arial, sans-serif;
 }
 
 a{
@@ -55,6 +67,7 @@ a{
 .logo-container{
   min-width: 10%;
   font-size: 4rem;
+  font-family: var(--font-tittles);
 }
 
 .nav{
@@ -131,12 +144,15 @@ a{
 .landing-page_content h1{
    margin: 1rem;
   font-size: var(--font-size-Xlarge);
+  font-family: var(--font-tittles);
   color: #1a0900;
 }
 
 .landing-page_content h2{
    margin: 1rem;
   font-size: var(--font-size-large);
+  font-family: var(--font-tittles);
+
 }
 
 
@@ -178,71 +194,118 @@ a{
 }
 
 .services div h2{
-  font-size: var(--font-size-large);
+  font-size: var(--font-size-Xlarge);
 }
 
 .services div p{
   font-size: var(--font-size-normal);
 }
-/***********************WELCOME*********************************/
 
-.welcome{
-  height: 60vh;
-  max-height: 60vh;
-  background-color: #fff;
-  border-bottom: 2px solid black;
+/***********************FLUJO DE TRABAJO*********************************/
+
+.workflow{
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  align-items: center;
+  text-align: center;
 }
 
-.welcome_content{
-  height: 100%;
-  width: 70%;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-}
-
-.welcome_content {
-  height: 100%;
-}
-
-.introduction{
-  height: 100%;
-  display: grid;
-  grid-template-columns: 1.2fr 1.8fr;
-  align-items: center;
-}
-
-.introduction img{
-   width: 90%;
-   box-shadow: 0px 0px 5px 5px silver;
-}
-
-.introduction p{
-  margin-left:rem;
-  font-size: var(--font-size-normal);
-}
-
-.assistance{
+.begining{
+  margin-top: 5%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 1.6rem;
+  align-items: center;
 }
 
-.assistance h2{
-  font-size: var(--font-size-large);
+
+.begining h2{
+  font-size: var(--font-size-Xlarge);
 }
 
-.assistance h3{
+.begining p{
+  font-size: var(--font-size-normal);
+  width: 70%;
+}
+
+.balanza{
+  color: var(--main-color);
+  position: relative;
+  margin-top: 5%;
+}
+
+
+.lineZ{
+  display: block;
+  position: absolute;
+  background-color: var(--main-color);
+  height: 1px;
+  width: 30px;
+}
+
+.lineZ.ol{
+  top: 50%;
+  right: 130%;
+}
+
+.lineZ.tl{
+  top: 50%;
+  left: 130%;
+}
+
+.protocol{
+  padding-top: 5% ;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+}
+
+.protocol div{
+  max-width: 80%;
+  height: 100%;
+}
+
+.protocol div img{
+  max-width: 100%;
+  box-shadow: 5px 5px 5px 1px var(--main-color);
+}
+
+.protocol div h2{
+  font-size: var(--font-size-Xlarge);
+}
+
+.protocol div p{
   font-size: var(--font-size-normal);
 }
 
-.assistance p{
-  font-size: var(--font-size-normal);
+
+
+.cut .balanza{
+  margin: 100% 0 100% 0;
 }
 
+
+.ending{
+  margin-top: 3%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+}
+
+
+.ending div{
+  max-width: 80%;
+}
+
+
+.ending div h2{
+  font-size: var(--font-size-Xlarge);
+}
+
+.ending div p{
+  font-size: var(--font-size-normal);
+}
 
 /***********************MEDIAQUERIES*********************************/
 
