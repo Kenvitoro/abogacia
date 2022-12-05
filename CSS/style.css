@@ -30,8 +30,11 @@ p{
 }
 
 :root{
-  --header-color: linear-gradient(75deg,#37190f,#38190f,#39190f,#402918,#5a2918);
-  --main-color: #5a2918;
+  --header-color: linear-gradient(45deg, #072f4c, #0c4771);
+  --banner-color: linear-gradient( 45deg, #094978, #105e96 );
+  --cards-color: linear-gradient( 45deg, #072f4c, #0c4771 );
+  --i-banner-color: linear-gradient( 45deg, #094978, #105e96 );
+  --main-color: #0c4771;
   --text-color-main: #fff;
   --text-color-secondary: #000;
   --font-size-Xlarge: clamp(2.5rem,3.6vh,7rem);
@@ -159,14 +162,25 @@ a{
   font-weight: 400;
 }
 
+.landing-page_content h3{
+ font-size: var(--font-size-normal);
+ font-family: var(--font-tittles);
+ font-weight: 600;
+ display: flex;
+ justify-content: center;
+}
+
 
 
 
 /***********************FORM*********************************/
 
+.landing-page_content .form{
+  padding-left: 1%;
+}
 
-
-.landing-page_content .form input{
+.landing-page_content .form input,
+.landing-page_content .form textarea{
   display: block;
   width: 95%;
   box-shadow: none;
@@ -174,6 +188,7 @@ a{
   opacity: 0.7;
   margin-top: 10px;
   padding: 7px;
+  resize: none;
 }
 
 .landing-page_content .form .comentario{
@@ -183,8 +198,7 @@ a{
 .landing-page_content .form input.btn-call-to-action{
   margin-top: 1rem;
   color: var(--text-color-main);
-  background-color: #570507;
-  border: 1px solid #73332b;
+  background-color: var(--main-color);
   padding: 10px 20px;
   width: 99%;
   cursor: pointer;
@@ -207,9 +221,9 @@ a{
 /***********************SERVICES*********************************/
 
 .services{
-  height: 50vh;
+  height: 40vh;
   min-height: 250px;
-  background-color: var(--main-color) ;
+  background: var(--header-color) ;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   place-items: center;
@@ -226,10 +240,12 @@ a{
 
 .services div h2{
   font-size: var(--font-size-Xlarge);
+  font-weight: 700;
 }
 
 .services div p{
   font-size: var(--font-size-normal);
+  font-weight: lighter;
 }
 
 /***********************FLUJO DE TRABAJO*********************************/
@@ -256,7 +272,9 @@ a{
 }
 
 .begining p{
+  text-align: center;
   font-size: var(--font-size-normal);
+  font-weight: lighter;
   width: 70%;
 }
 
@@ -272,7 +290,7 @@ a{
   display: block;
   position: absolute;
   background-color: var(--main-color);
-  height: 3px;
+  height: 2px;
   width: 60px;
 }
 
@@ -309,6 +327,7 @@ a{
 
 .protocol div p{
   font-size: var(--font-size-normal);
+  font-weight: lighter;
 }
 
 
@@ -341,7 +360,117 @@ a{
   max-width: 100%;
   font-size: var(--font-size-normal);
   text-align: left;
+  font-weight: lighter;
 }
+
+/***********************CALL-TO-ACTION-BANNER*************************************/
+.call-to-action{
+  margin-top: 5%;
+  height: 20vh;
+  min-height: 250px;
+  background: var(--banner-color);
+  color: var(--text-color-main);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+.call-to-action h2{
+  font-size: var(--font-size-Xlarge);
+}
+
+.call-to-action p{
+  font-weight: lighter;
+  align-self: center;
+}
+
+
+.call-to-action .btn-call-to-action{
+  width: max-content;
+  align-self: center;
+  background-color: #fff;
+  color: #000;
+  border-radius: 20%/80%;
+}
+
+/***********************EXPERTICIE*********************************/
+
+.areas{
+  color: var(--text-color-main);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+  margin-top: 5%;
+}
+
+.areas div{
+  max-width: 80%;
+  min-height: 200px;
+  height: 300px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.areas .one,
+.areas .third{
+background: var(--cards-color);
+}
+
+.areas .second{
+  background:var(--i-banner-color);
+}
+
+.areas div i{
+  color: #fff;
+  font-size: 8rem;
+}
+
+.areas div h2{
+  font-size: var(--font-size-Xlarge);
+  font-weight: 400;
+}
+
+.areas div p{
+  font-weight: 100;
+  text-align: center;
+}
+
+
+.begining .btn-call-to-action{
+  width: max-content;
+  align-self: center;
+  background: var(--i-banner-color);
+  color: var(--text-color-main);
+  border-radius: 20%/80%;
+}
+
+
+
+footer{
+  margin-top: 3%;
+  background: var(--header-color);
+  height: 6rem;
+  color: var(--text-color-main);
+  display: flex;
+  justify-content: end;
+ 
+}
+
+.iconos{
+  height: 100%;
+  display: flex;
+  margin-right: 4rem;
+}
+
+footer .iconos a{
+  font-size: var(--font-size-Xlarge);
+  padding: 1rem;
+}
+
 
 /***********************MEDIAQUERIES*********************************/
 
