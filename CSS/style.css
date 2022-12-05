@@ -11,6 +11,7 @@ html{
 }
 body{
   font-size: 1.6rem;
+  overflow-x: hidden;
 }
 
 ul{
@@ -73,6 +74,12 @@ a{
   font-size: 4rem;
   font-family: var(--font-tittles);
   font-weight: 500;
+}
+
+.logo-container img{
+  height: auto;
+  width: 60px;
+  border-radius: 10px;
 }
 
 .nav{
