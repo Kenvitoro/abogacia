@@ -439,6 +439,9 @@ background: var(--cards-color);
   text-align: center;
 }
 
+.begining h2{
+  text-align: center;
+}
 
 .begining .btn-call-to-action{
   width: max-content;
@@ -556,7 +559,49 @@ footer .iconos a{
 .welcome_content{
   width: 90%;
 }
+
+.services{
+  grid-template-columns: 1fr;
+  height: auto;
 }
+
+
+.services div{
+  padding: 20px 0 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-bottom: 1px solid #fff;
+}
+
+.protocol{
+  grid-template-columns: 1fr;
+}
+
+.ending{
+  grid-template-columns: 1fr;
+}
+
+.call-to-action{
+  height: auto;
+}
+
+.call-to-action .btn-call-to-action{
+  margin-bottom: 20px;
+}
+
+
+.areas{
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+}
+
+
+
+
 
 @media (max-width:680px){
   .landing-page_content{
