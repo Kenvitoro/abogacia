@@ -127,7 +127,7 @@ a{
 
 /***********************HERO*********************************/
 .landing-page{
-  background-image: url(/public/img/landing.jpg);
+  background-image: url(/landing.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 25% 30%;
