@@ -183,7 +183,9 @@ a{
 /***********************FORM*********************************/
 
 .landing-page_content .form{
-  padding-left: 1%;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
 }
 
 .landing-page_content .form input,
@@ -196,10 +198,11 @@ a{
   margin-top: 10px;
   padding: 7px;
   resize: none;
+  font-size: var(--font-size-normal);
 }
 
 .landing-page_content .form .comentario{
-  height:120px;
+  height:190px;
 }
 
 .landing-page_content .form input.btn-call-to-action{
@@ -207,8 +210,9 @@ a{
   color: var(--text-color-main);
   background-color: var(--main-color);
   padding: 10px 20px;
-  width: 99%;
+  width: 95%;
   cursor: pointer;
+  opacity: 1;
 } 
 
 
@@ -228,17 +232,25 @@ a{
 /***********************SERVICES*********************************/
 
 .services{
-  height: 40vh;
+  height: 45vh;
   min-height: 250px;
   background: var(--header-color) ;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   place-items: center;
 }
 
 .services div{
+  background: var(--i-banner-color);
+  box-shadow: 0 0 10px 1px #000;
+  height: 90%;
   width: 80%;
   color: var(--text-color-main);
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  text-align: center;
+  gap: 1.5rem;
 }
 
 .services div i{
@@ -254,6 +266,19 @@ a{
   font-size: var(--font-size-normal);
   font-weight: lighter;
 }
+
+
+.services div button{
+  font-size: var(--font-size-normal);
+  width:max-content;
+  align-self: center;
+  background-color: transparent;
+  color: var(--text-color-main);
+  border-radius: 20%/80%;
+  border: none;
+  cursor: pointer;
+}
+
 
 /***********************FLUJO DE TRABAJO*********************************/
 
@@ -271,6 +296,7 @@ a{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 1.5rem;
 }
 
 
@@ -321,6 +347,10 @@ a{
 .protocol div{
   max-width: 80%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
 }
 
 .protocol div img{
@@ -354,19 +384,22 @@ a{
 
 .ending div{
   max-width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 
 .ending div h2{
   max-width: 100%;
   font-size: var(--font-size-Xlarge);
-  text-align: left;
+  text-align: center;
 }
 
 .ending div p{
   max-width: 100%;
   font-size: var(--font-size-normal);
-  text-align: left;
+  text-align: center;
   font-weight: lighter;
 }
 
@@ -496,6 +529,13 @@ footer .iconos a{
 
   .landing-page_content .form .comentario{
     height:150px;
+
+  }
+
+  
+  .services{
+    height: 70vh;
+   grid-template-columns: repeat(3, 1fr);   
   }
 }
 
@@ -570,17 +610,20 @@ footer .iconos a{
 .services{
   grid-template-columns: 1fr;
   height: auto;
+  padding: 20px 0 20px 0;
+  gap: 1.5rem;
 }
 
 
 .services div{
+  min-height: 38vh;
+  width: 60%;
   padding: 20px 0 20px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  border-bottom: 1px solid #fff;
 }
 
 .protocol{
@@ -605,6 +648,8 @@ footer .iconos a{
   gap: 20px;
 }
 
+
+
 .landing-page_content{
   margin-right: 0;
 }
@@ -617,5 +662,9 @@ footer .iconos a{
 @media (max-width:680px){
   .landing-page_content{
     width: 80%;
+}
+
+.services div{
+  width: 80%;
 }
 }
