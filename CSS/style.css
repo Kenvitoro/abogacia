@@ -233,7 +233,7 @@ a{
 
 .services{
   height: 47vh;
-  min-height: 250px;
+  min-height: 560px;
   background: var(--header-color) ;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
