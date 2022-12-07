@@ -11,7 +11,6 @@ html{
 }
 body{
   font-size: 1.6rem;
-  overflow-x: hidden;
 }
 
 ul{
@@ -61,6 +60,7 @@ a{
   align-items: center;
   padding: 0 10%;
   min-height: 8vh;
+  overflow-x: hidden;
 }
 
 .nav,
@@ -232,43 +232,81 @@ a{
 /***********************SERVICES*********************************/
 
 .services{
-  height: 45vh;
+  height: 47vh;
   min-height: 250px;
   background: var(--header-color) ;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   place-items: center;
+  perspective: 1000px;
+
 }
 
 .services div{
-  background: var(--i-banner-color);
-  box-shadow: 0 0 10px 1px #000;
   height: 90%;
   width: 80%;
-  color: var(--text-color-main);
   display: flex;
   flex-direction: column;
   place-content: center;
   text-align: center;
   gap: 1.5rem;
+  perspective: 1000px;
 }
 
-.services div i{
+.services div:hover .card{
+  box-shadow: 0 0 10px 1px #000;
+  transform: rotateY(180deg);
+  border-radius: 10px;
+}
+
+
+.services div .card{
+  height: 100%;
+  min-width: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all 0.6s;
+}
+
+
+.services div .card .card-front,
+.services div .card .card-back{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden; 
+  transform-style: preserve-3d;
+}
+
+.services div .card .card-front{
+  background: var(--i-banner-color);
+  color: var(--text-color-main);
+
+}
+
+
+.services div .card .card-front i{
   font-size: var(--font-size-Xlarge);
+  transform: translateZ(60px);
 }
 
-.services div h2{
+.services div .card .card-front h2{
   font-size: var(--font-size-Xlarge);
   font-weight: 700;
+  transform: translateZ(60px);
 }
 
-.services div p{
+.services div .card .card-front p{
   font-size: var(--font-size-normal);
   font-weight: lighter;
+  transform: translateZ(60px);
 }
 
 
-.services div button{
+.services div .card .card-front button{
   font-size: var(--font-size-normal);
   width:max-content;
   align-self: center;
@@ -277,7 +315,33 @@ a{
   border-radius: 20%/80%;
   border: none;
   cursor: pointer;
+  transform: translateZ(60px);
 }
+
+
+.services div .card .card-back{
+  transform: rotateY(180deg);
+  background-color: #fff;
+  color: var(--text-color-secondary);
+}
+
+.services div .card .card-back ul{
+  list-style: disc;
+  display:flex ;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  padding-left: 2.8rem;
+  transform: translateZ(60px);
+}
+
+
+.services div .card .card-back ul li{
+ font-size: var(--font-size-normal) ;
+ text-align: left;
+}
+
+
 
 
 /***********************FLUJO DE TRABAJO*********************************/
@@ -624,6 +688,13 @@ footer .iconos a{
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+
+.services div:active .card{
+  box-shadow: 0 0 10px 1px #000;
+  transform: rotateY(180deg);
+  border-radius: 10px;
 }
 
 .protocol{
