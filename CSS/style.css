@@ -78,7 +78,7 @@ a{
 
 .logo-container img{
   height: auto;
-  width: 60px;
+  max-width: 60px;
   border-radius: 10px;
 }
 
@@ -217,7 +217,7 @@ a{
 
 
 .btn-call-to-action:active{
-  transform: scale(1);
+  transform: scale(1.05);
 }
 
 
@@ -233,12 +233,11 @@ a{
 
 .services{
   height: 47vh;
-  min-height: 560px;
+  min-height: 350px;
   background: var(--header-color) ;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   place-items: center;
-  perspective: 1000px;
 
 }
 
@@ -380,6 +379,7 @@ a{
   color: var(--main-color);
   position: relative;
   margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 
@@ -406,6 +406,7 @@ a{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   place-items: center;
+  gap: 4rem;
 }
 
 .protocol div{
@@ -478,6 +479,7 @@ a{
   flex-direction: column;
   text-align: center;
   justify-content: center;
+  gap: 1.5rem;
 }
 
 .call-to-action h2{
@@ -517,6 +519,7 @@ a{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 1.5rem;
 }
 
 .areas .one,
@@ -558,7 +561,7 @@ background: var(--cards-color);
 
 
 footer{
-  margin-top: 3%;
+  margin-top: 5%;
   background: var(--header-color);
   height: 6rem;
   color: var(--text-color-main);
@@ -601,6 +604,41 @@ footer .iconos a{
     height: 70vh;
    grid-template-columns: repeat(3, 1fr);   
   }
+}
+
+
+@media (max-height:1000px){
+
+.logo-container img{
+  max-width: 45px;
+}
+
+.services div{
+  width: 85%;
+}
+
+.landing-page_content{
+ max-height: 90%;
+  min-width: 30%;
+}
+
+.landing-page_content h1{
+  font-size: var(--font-size-large);
+}
+
+.landing-page_content h2{
+  font-size: var(--font-size-large);
+}
+
+
+.landing-page_content .form .comentario{
+  height:125px;
+}
+
+.ending{
+  gap: 3rem;
+}
+
 }
 
 
