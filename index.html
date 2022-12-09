@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet"> 
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="stylesheet" href="./CSS/style.css">
@@ -45,7 +46,8 @@
             </form>
           </div>
       </section>
-      <section class="services banner">
+      <section data-aos="fade-up"
+           data-aos-anchor-placement="center-bottom" class="services banner">
           <div>
 
             <div class="card">
@@ -200,7 +202,8 @@
           </div>
       </section>
 
-      <section class="workflow">
+      <section data-aos="fade-up"
+           data-aos-anchor-placement="center-bottom" class="workflow">
         <div class="begining">
           <h2>Como funciona?</h2>
           <p>
@@ -208,7 +211,7 @@
           </p>
         <i class="fa-solid fa-scale-balanced balanza"><span class="lineZ ol"></span><span class="lineZ tl"></span></i>
         </div>
-        <div class="protocol">
+        <div data-aos="fade-right" class="protocol">
           <div>
             <img src="https://kriesi.at/themes/enfold-law/wp-content/uploads/sites/78/2018/05/services1-845x321.jpg" alt="">
             <h2>Ponte en contacto via telefonica o e-mail</h2>
@@ -232,7 +235,7 @@
 
         <div class="cut"><i class="fa-solid fa-scale-balanced balanza"><span class="lineZ ol"></span><span class="lineZ tl"></span></i></div>
 
-        <div class="ending">
+        <div data-aos="fade-right" class="ending">
           
           <div>
             <h2>Cual es el siguiente paso?</h2>
@@ -248,20 +251,21 @@
           
         </div>
       </section>
-      <section class="call-to-action">
+      <section data-aos="fade-up"
+           data-aos-anchor-placement="center-bottom" class="call-to-action">
         <h2>Cuenta con un experto a la hora de informarte y defender tu caso</h2>
         <p>si quieres ser representado por un perito en leyes no dudes y contactame</p>
         <button class="btn-call-to-action">Contactame</button>
 
       </section>
 
-      <section class="expertise-areas">
+      <section data-aos="fade-right" class="expertise-areas">
         <div class="begining">
           <h2>Clientes anteriores</h2>
           <h2>Representación y asesorías a sociedades mercantiles tales como:</h2>
       </section>
 
-      <section class="areas">
+      <section data-aos="fade-right" class="areas">
         <div class="one">
           <img src="public/img/pacasMiller.jpg" alt="">
           <h2>Pacas Miller</h2>
@@ -278,7 +282,8 @@
           <h2>Aguila Golden</h2>
         </div>
       </section>
-      <div class="begining">
+      <div data-aos="fade-up"
+           data-aos-duration="3000" class="begining">
         <h2>Alguna duda? Ponte en contacto y comencemos!</h2>
         <button class="btn-call-to-action">Contactame</button>
      
@@ -301,7 +306,10 @@
 
 
 
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
     <script src="./main.js"></script>
   </body>
 </html>
