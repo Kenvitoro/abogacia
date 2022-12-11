@@ -607,20 +607,29 @@ footer .iconos a{
 /***********************CONTACTO*********************************/
 
 .img-banner{
-  background-image: url(/public/img/Contacto.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 25% 40%;
   width: 100vw;
-  height: 350px;
+  height: 400px;
+  overflow: hidden;
+  border: 1px solid black;
+  position: relative;
 }
 
-.glass{
-  height: 100%;
+.img-banner img{
   width: 100%;
-  background-color: #000;
+  height: auto;
+  position: absolute;
+  z-index: -1;
+}
+
+
+
+.glass{
+  height: auto;
+  width: 100%;
+  background-color: var(--main-color);
   opacity: 0.4;
 }
+
 
 .form-case{
   display: grid;
@@ -928,10 +937,9 @@ align-content: center;
   "comentario"
   "comentario"
   "enviar";
-
   order: 1;
   padding: 5rem 2rem 0rem;
-  }
+}
 
   
 }
