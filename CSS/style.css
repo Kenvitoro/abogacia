@@ -624,61 +624,93 @@ footer .iconos a{
 
 .form-case{
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1.1fr 0.9fr;
 }
 
 
 .form-case .form{
 display: grid;
 grid-template-columns: repeat(2, 1fr);
-grid-template-rows: repeat(6, 1fr);
+grid-template-rows: repeat(7, 1fr);
 grid-template-areas: 
-"titulo titulo"
 "nombre email"
 "asunto asunto"
 "comentario comentario"
 "comentario comentario"
+"comentario comentario"
 "enviar enviar";
 grid-gap: 2rem;
-padding: 2rem;
+padding: 5rem 7rem 0rem;
 align-content: center;
-}
-
-.form-case .form h2{
-  grid-area: titulo;
-  text-align: center;
 }
 
 
 .form-case .form .nombre{
   grid-area: nombre;
   padding: 1.6rem;
-
+  background-color: #f8f8f8;
+  border: unset;
+  max-height: 7.05rem;
 }
 
 .form-case .form input[type="email"]{
   grid-area: email;
   padding: 1.6rem;
+  background-color: #f8f8f8;
+  border: unset;
+  max-height: 7.05rem;
 }
 
 .form-case .form .asunto{
   grid-area: asunto;
   padding: 1.6rem;
-
+  background-color: #f8f8f8;
+  border: unset;
+  max-height: 7.05rem;
 }
 
 .form-case .form textarea{
   grid-area: comentario;
   padding: 1.6rem;
+  background-color: #f8f8f8;
+  border: unset;
 
 }
 
 .form-case .form .btn-call-to-action{
   grid-area: enviar;
   padding: 1.6rem;
-
   width: 20rem;
 }
+
+
+.form-case .form-text{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  padding: 8rem 3rem 0rem;
+}
+
+.form-case .form-text h2{
+  font-size: clamp(2.5rem,4.2vh,10rem);
+  font-weight: 700;
+  color: var(--main-color);
+}
+
+
+.form-case .form-text p{
+  text-align: center;
+  max-width: 70rem;
+  font-size: var(--font-size-large);
+}
+
+.form-case .form-text p span{
+  color: var(--main-color);
+
+}
+
+
 
 /***********************MEDIAQUERIES*********************************/
 
@@ -878,6 +910,29 @@ align-content: center;
 .landing-page_content{
   margin-right: 0;
 }
+
+
+.form-case{
+  grid-template-columns: 1fr;
+}
+
+
+.form-case .form{
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(8, 1fr);
+  grid-template-areas: 
+  "titulo"
+  "nombre"
+  "email"
+  "asunto"
+  "comentario"
+  "comentario"
+  "enviar";
+
+  order: 1;
+  }
+
+  
 }
 
 
