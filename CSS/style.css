@@ -1051,9 +1051,15 @@ grid-column-end: 4;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 2fr;
   gap: 0.5rem;
+  height: 110vh;
+}
+
+.services-card i{
+  font-size: 5.5rem;
 }
 
 .services-card p{
+  font-size: 1.8rem;
   max-width: 95%;
 }
 
@@ -1091,4 +1097,5 @@ grid-column-end: 4;
 .services div{
   width: 80%;
 }
+
 }
