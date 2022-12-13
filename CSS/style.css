@@ -1059,7 +1059,7 @@ grid-column-end: 4;
 
 
 .services-card_description ul li{
-  font-size: var(--font-size-normal);
+  font-size: 1.7rem;
 }
 
 
