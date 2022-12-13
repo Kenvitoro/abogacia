@@ -131,15 +131,20 @@ a{
 
 /***********************HERO*********************************/
 .landing-page{
-  background-image: url(/landing.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 25% 30%;
   width: 100%;
   height: 92vh;
   display: flex;
   justify-content: end;
   align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.landing-page img{
+width: 100%;
+height: 100%;
+position: absolute;
+object-fit: cover;
 }
 
 .landing-page_content{
@@ -371,6 +376,16 @@ a{
 .begining h2{
   font-size: var(--font-size-Xlarge);
 }
+
+
+.begining h4{
+  font-size: clamp(2.5rem,4.2vh,10rem);
+  font-weight: 700;
+  color: var(--main-color);
+}
+
+
+
 
 .begining p{
   text-align: center;
@@ -608,26 +623,13 @@ footer .iconos a{
 
 .img-banner{
   width: 100vw;
-  height: 400px;
-  overflow: hidden;
-  border: 1px solid black;
-  position: relative;
+  height: 50rem;
 }
 
 .img-banner img{
   width: 100%;
-  height: auto;
-  position: absolute;
-  z-index: -1;
-}
-
-
-
-.glass{
-  height: auto;
-  width: 100%;
-  background-color: var(--main-color);
-  opacity: 0.4;
+  height: 100%;
+  object-fit: cover;
 }
 
 
@@ -720,12 +722,104 @@ align-content: center;
 }
 
 
+/***********************SERVICES*********************************/
+/***********************SERVICES*********************************/
+/***********************SERVICES*********************************/
+/***********************SERVICES*********************************/
+/***********************SERVICES*********************************/
+/***********************SERVICES*********************************/
+/***********************SERVICES*********************************/
+/***********************SERVICES*********************************/
+
+
+.services-extended{
+  margin: auto;
+  display: grid;
+  place-content: center;
+  width: 90%;
+  gap: 5rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(6, 1fr);
+}
+.services-extended .services-item{
+  height: 80vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 5%;
+}
+
+.services-card{
+  background-color: var(--main-color);
+  color: var(--text-color-main);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 3.5rem;
+}
+
+.services-card i{
+  font-size: clamp(2.5rem,9vh,10rem)
+}
+
+
+.services-card h2{
+  font-size: var(--font-size-Xlarge);
+  font-weight: 700;
+}
+
+.services-card p{
+  font-size: var(--font-size-normal);
+  font-weight: lighter;
+  text-align: center;
+  max-width: 70%;
+}
+
+
+
+.services-card_description{
+  background-color: #f8f8f8;  
+  padding:10%;
+}
+
+.services-card_description ul{
+height: 100%;
+list-style: disc;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+}
+
+.services-card_description ul li{
+  font-size: var(--font-size-Xlarge);
+}
+
+
+.services-card_description:nth-child(2n){
+grid-column-start: 2;
+grid-column-end: 4;
+}
+
+.services-card_description:nth-child(2n+1){
+  grid-column-start: 1;
+  grid-column-end: 3;  
+}
+
+
 
 /***********************MEDIAQUERIES*********************************/
 
 @media (max-width:1500px){
   .landing-page_content{
     width: 38%;
+  }
+
+  .img-banner{
+    width: 100vw;
+    height: 40rem;
   }
 }
   
@@ -746,6 +840,11 @@ align-content: center;
   .services{
     height: 70vh;
    grid-template-columns: repeat(3, 1fr);   
+  }
+
+  .img-banner{
+    width: 100vw;
+    height: 35rem;
   }
 
 }
@@ -941,7 +1040,43 @@ align-content: center;
   padding: 5rem 2rem 0rem;
 }
 
+.services-extended{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 2rem;
+}
+
+.services-extended .services-item{
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 2fr;
+  gap: 0.5rem;
+}
+
+.services-card p{
+  max-width: 95%;
+}
+
+
+.services-card_description ul li{
+  font-size: var(--font-size-normal);
+}
+
+
+.services-card_description:nth-child(2n){
+  grid-column-start: unset;
+  grid-column-end: unset;
+  }
   
+  .services-card_description:nth-child(2n+1){
+    grid-column-start: unset;
+    grid-column-end: unset;  
+  }
+
+
+  .services-card:nth-child(2n){
+    order: -1;
+    }
 }
 
 
