@@ -11,6 +11,7 @@ html{
 }
 body{
   font-size: 1.6rem;
+  overflow-x:hidden;
 }
 
 ul{
@@ -48,6 +49,10 @@ a{
   text-decoration: none;
   color: var(--text-color-main);
   font-size: var(--font-size-normal);
+}
+
+main{
+  margin-bottom: 3%;
 }
 
 /***********************CABEZERA*********************************/
@@ -591,7 +596,6 @@ max-width: 240px;
 
 
 footer{
-  margin-top: 5%;
   background: var(--header-color);
   height: 6rem;
   color: var(--text-color-main);
@@ -691,6 +695,7 @@ align-content: center;
   grid-area: enviar;
   padding: 1.6rem;
   width: 20rem;
+  max-height: 6.05rem;
 }
 
 
@@ -808,6 +813,38 @@ grid-column-end: 4;
 }
 
 
+
+/***********************ABOUT-ME*********************************/
+/***********************ABOUT-ME*********************************/
+/***********************ABOUT-ME*********************************/
+/***********************ABOUT-ME*********************************/
+/***********************ABOUT-ME*********************************/
+/***********************ABOUT-ME*********************************/
+/***********************ABOUT-ME*********************************/
+/***********************ABOUT-ME*********************************/
+
+.about-me{
+  background-color: blueviolet;
+  height: 85vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1.8fr 1.2fr;
+}
+
+
+
+.about-me_img{
+border: #000 1px solid;
+}
+
+.about-me_img img{
+  width: auto;
+  max-width: 400px;
+}
+
+.about-me_text{
+border: #000 1px solid;
+}
 
 /***********************MEDIAQUERIES*********************************/
 
