@@ -726,6 +726,27 @@ align-content: center;
 }
 
 
+.form-confirmation{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form-confirmation img,
+.form-confirmation h1{
+  color: var(--main-color);
+  text-align: center;
+}
+
+
+.none{
+  opacity: 0;
+  display: none;
+}
+
+
 /***********************SERVICES*********************************/
 /***********************SERVICES*********************************/
 /***********************SERVICES*********************************/
@@ -824,26 +845,60 @@ grid-column-end: 4;
 /***********************ABOUT-ME*********************************/
 
 .about-me{
-
-  height: 90vh;
+  height: 100vh;
   width: 100vw;
   display: grid;
-  grid-template-columns: 1.8fr 1.2fr;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: -3%;
+  font-family: var(--font-normal);
+  align-items: center;
 }
 
 
 
 .about-me_img{
-border: #000 1px solid;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.about-me_img .about-card{
+  background-color: var(--main-color);
+  border-radius: 20px;
+  width: 60%;
+  padding: 10%;
+  max-height: 900px;
 }
 
 .about-me_img img{
-  width: auto;
-  max-width: 400px;
+  width: 100%;
 }
 
 .about-me_content{
-border: #000 1px solid;
+  height: 80%;
+  font-size: clamp(1.6rem,2.2vh,8rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 90%;
+  background-color: #f8f8f8;
+  margin: 20px 0;
+  border-radius: 4px;
+  padding: 5%;
+}
+
+.about-me_content p{
+  margin-bottom: 4%
+}
+
+.about-me_content p span{
+  font-size: clamp(2.5rem,5.2vh,10rem);
+  color: var(--main-color);
+}
+
+.about-me_content ul li i{
+  color: var(--main-color);
 }
 
 /***********************MEDIAQUERIES*********************************/
@@ -1119,6 +1174,41 @@ border: #000 1px solid;
   .services-card:nth-child(2n){
     order: -1;
     }
+
+
+
+    .about-me{
+      grid-template-columns: 1fr;
+      position: relative;
+      height: auto;
+      margin-top: 9vh;
+    }
+
+    .about-me_img{
+      height: auto;
+    }
+
+
+    .about-me_img .about-card{
+      height: auto;
+    }
+
+
+    .about-me_content{
+      height: auto;
+      max-width: 100%;
+      margin: 20px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .about-me_content p,
+    .about-me_content ul{
+      width: 80%;
+    }
+
+
 }
 
 

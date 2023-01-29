@@ -38,13 +38,14 @@
             <h1>Guiando tus resoluciones exitosamente de forma rapida e inteligente</h1>
             <h2>Comprometido con brindar el mejor servicio y satisfaccion al cliente</h2>
             <h3>Contactame!</h3>
-            <form action="" class="form">
-              <input type="text" placeholder="Nombre">
-              <input type="email" placeholder="E-mail">
-              <input class="asunto" type="text" placeholder="Asunto a tratar ej: divorcio, pension alimenticia, etc.">
-              <textarea class="comentario" placeholder="Comentario"></textarea>
+            <form  class="form" action="https://formsubmit.co/Noemg09@gmail.com" method="POST">
+
+              <input name="nombre" type="text" placeholder="Nombre" title="nombre sólo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
+              <input name="email" type="email" placeholder="E-mail" title="formato de E-mail incorrecto" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required>
+              <input name="asunto" class="asunto" type="text" placeholder="Asunto a tratar ej: divorcio, pension alimenticia, etc." required>
+              <textarea name="comentario" class="comentario" placeholder="Comentario"  title="tu comentario no debe exceder los 255 caracateres" data-pattern="^.{1,255}$" required></textarea>
               <input type="submit" class="btn-call-to-action" value="Enviar">
-            </form>
+            </action=>
           </div>
       </section>
       <section id="servicios" data-aos="fade-up"

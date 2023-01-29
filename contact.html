@@ -34,12 +34,12 @@
           <img src="public/img/Contacto.jpg" alt="contacto">
         </div>
 
-        <div data-aos="fade-left" class="form-case">
-          <form action="" class="form">
-            <input type="text" placeholder="Nombre" class="nombre">
-            <input type="email" placeholder="E-mail">
-            <input type="text" placeholder="Asunto a tratar ej: divorcio, pension alimenticia, etc." class="asunto">
-            <textarea class="comentario" placeholder="Comentario"></textarea>
+        <div data-aos="fade-left" class="form-case" >
+          <form  class="form"  action="https://formsubmit.co/Noemg09@l.com" method="POST">
+            <input name="nombre" type="text" placeholder="Nombre" class="nombre" title="nombre sólo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
+            <input name="email" type="email" placeholder="E-mail" title="formato de E-mail incorrecto" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required>
+            <input name="asunto" type="text" placeholder="Asunto a tratar ej: divorcio, pension alimenticia, etc." class="asunto" required>
+            <textarea name="comentario" class="comentario" placeholder="Comentario" title="tu comentario no debe exceder los 255 caracateres" data-pattern="^.{1,255}$" required></textarea>
             <input type="submit" class="btn-call-to-action" value="Enviar">
           </form>
 
@@ -50,6 +50,12 @@
             <p><span><i class="fa-regular fa-envelope"></i> Noemg09@gmail.com</span></p>
           </div>
           
+        </div>
+
+        <div class="form-confirmation">
+          <img class="contact-form-loader none" src="./public/img/ball-triangle.svg" alt="cargando">
+          <h1 class="contact-form-response none">Tu mensaje ha sido enviado correctamente</h1>
+
         </div>
       </main>
     
