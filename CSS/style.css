@@ -600,20 +600,19 @@ footer{
   height: 6rem;
   color: var(--text-color-main);
   display: flex;
-  justify-content: end;
+  justify-content: center;
+  align-items: center;
  
 }
 
 .iconos{
   height: 100%;
   display: flex;
-  margin-right: 4rem;
+  justify-content: center;
+  align-items: center;
 }
 
-footer .iconos a{
-  font-size: var(--font-size-Xlarge);
-  padding: 1rem;
-}
+
 
 /***********************CONTACTO*********************************/
 /***********************CONTACTO*********************************/
